@@ -1,0 +1,48 @@
+<section class="grediant-bg">
+  <div class="container">
+    <div class="company-logo text-center mb-5">
+      <a routerLink="/">
+        <img src="assets/images/logo.png" alt="company logo">
+      </a>
+    </div>
+    <form id="signin" class="regform" [formGroup]="regform" (ngSubmit)="LoginUser(regform)">
+      <div class="display-text">
+        <h2 class="mb-3 font-weight-bold text-dark">Returning Users: Login</h2>
+      </div>
+      <div class="row">
+        <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <i class="input-icon-before far fa-envelope"></i>
+          <input name="signin-email" formControlName="signup_username" class="form-control floating-input" placeholder="Username OR Email" />
+          <!-- <span class="small UserAvailable text-success">&#x00A0;</span> -->
+          <span class="small UserNotAvailable text-success" *ngIf="regform.get('signup_username').touched && regform.get('signup_username').hasError('required')">&#x00A0;</span>
+          <!-- <span class="fa fa-spinner fa-spin keyup-input"></span>  -->
+          <span class="validate-value" *ngIf="regform.get('signup_username').touched && regform.get('signup_username').hasError('required')">Username Required</span>
+        </div>
+        <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <i class="input-icon-before fa fa-key"></i>
+          <input name="signin-password" formControlName="signup_password" type="password" class="form-control floating-input" placeholder="Password"
+            required/>
+          <!-- <span class="small UserAvailable text-success">&#x00A0;</span> -->
+          <!-- <span class="small UserNotAvailable text-success">&#x00A0;</span> -->
+          <!-- <span class="fa fa-spinner fa-spin keyup-input"></span> -->
+          <span class="small UserNotAvailable text-success" *ngIf="regform.get('signup_password').touched && regform.get('signup_password').hasError('required')">&#x00A0;</span>
+          <span class="validate-value" *ngIf="regform.get('signup_password').touched && regform.get('signup_password').hasError('required')">Password Required</span>
+        </div>
+      </div>
+      <span class="validate-value" *ngIf="noMatch">Username OR Password does not Match</span>
+      <button class="btn submit" type="submit" [disabled]="regform.invalid || processing">Login</button>
+    </form>
+    <p class="text-center small mb30">don't have a Lextra account?
+      <a routerLink='/register'>click here</a>
+    </p>
+    <div class="text-center small mb-3">
+      <a routerLink='/forgetPassword'>forgot password</a>
+    </div>
+    <div class="loginbox-bottom border-top">
+      <p class="text-center small mb-3 py-3">are you a merchant who wants to claim your business?</p>
+      <button class="btn submit">Get your business started</button>
+    </div>
+  </div>
+  <!-- signin -->
+  <!-- container close -->
+</section>

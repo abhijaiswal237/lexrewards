@@ -1,0 +1,53 @@
+<section class="lextra-innerpage lextra-account">
+    <div class="container">
+        <div class="lextra-account-box">
+            <h2 class="mb-4 mt-4 lextra-innerpage-heading"> My Account
+                <span class="float-right mobile-hide">
+                    <a (click)="deleteUser()" class="btn btn-link text-danger d-inline">Delete Account</a>
+                    <a (click)="logout()" class="btn submit d-inline">Logout</a>
+                </span>
+                <span class="float-right mobile-show">
+                    <a href="javascript:void(0)" class="tab-ham-mobile mobile-show">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </span>
+            </h2>
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link" id="profile-tab" data-toggle="tab" routerLink="/dashboard/account/profile" role="tab" aria-controls="home"
+                        aria-selected="false" routerLinkActive="active">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="changepassword-tab" data-toggle="tab" routerLink="/dashboard/account/changePassword" role="tab" aria-controls="profile"
+                        aria-selected="false" routerLinkActive="active">Change password</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="facebooksetting-tab" data-toggle="tab" routerLink="/dashboard/account/fbSettings" role="tab" aria-controls="contact"
+                        aria-selected="false" routerLinkActive="active">facebook setting</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="mytransaction-tab" data-toggle="tab" routerLink="/dashboard/account/myTransactions" role="tab" aria-controls="contact"
+                        aria-selected="false" routerLinkActive="active">My transaction</a>
+                </li>
+                <li class="nav-item mobile-show">
+                    <a class="nav-link" id="deleteaccount-tab" data-toggle="tab" (click)="deleteUser()" role="tab" aria-controls="contact" aria-selected="false">Delete Account</a>
+                </li>
+                <li class="nav-item mobile-show">
+                    <a class="nav-link" id="logout-tab" data-toggle="tab" (click)="logout()" role="tab" aria-controls="contact" aria-selected="false">Logout</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                        <span class="lextra-account-username">
+                            <strong>username</strong>{{user}}</span>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                        <span class="lextra-account-number">account #: {{serialNumber}}</span>
+                    </div>
+                </div>
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</section>

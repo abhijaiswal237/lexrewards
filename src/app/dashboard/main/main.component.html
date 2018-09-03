@@ -1,0 +1,91 @@
+<section class="lextra-dashboard">
+  <div class="map-container position-relative">
+    <div #gmap id="map"></div>
+    <div class="hide-side-bar" (click)="toggleSideBar()">
+      <div *ngIf="showContainer">
+        <i class="fa fa-chevron-right"></i>
+      </div>
+      <div *ngIf="!showContainer">
+        <i class="fa fa-chevron-left"></i>
+      </div>
+    </div>
+    <div class="lextra-advanced-serch-form">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text bg-white border-0" id="basic-addon5">
+            <i class="fa fa-search"></i>
+          </span>
+        </div>
+        <input type="text" class="form-control border-0 py-sm-3 mr-1" placeholder="Search (e.g. coffee in Toronto)" aria-label="Username"
+          aria-describedby="basic-addon1">
+        <div class="input-group-prepend">
+          <span class="input-group-text border-0 py-sm-3 bg-blue mr-1" id="basic-addon2">
+            <a class="collapsed" data-toggle="collapse" href="#hidden-advance-search">
+              <i class="fa fa-chevron-up"></i>
+            </a>
+          </span>
+        </div>
+        <div class="input-group-prepend mobile-show">
+          <span class="input-group-text border-0 py-sm-3 bg-blue mr-1" id="basic-addon3">
+            <!--			<a data-toggle="collapse" href="#search-list-directory" aria-expanded="true" ><i class="fa fa-list-ul"></i></a>-->
+            <a href="#search-list-directory">
+              <i class="fa fa-list-ul"></i>
+            </a>
+          </span>
+        </div>
+      </div>
+      <div class="hidden-advance-search mt-3 collapse" id="hidden-advance-search">
+        <h6>
+          <strong>Location Range</strong>
+        </h6>
+        <select class="form-control mb-3">
+          <option>option 1</option>
+          <option>option 1</option>
+          <option>option 1</option>
+          <option>option 1</option>
+        </select>
+        <!-- <input type="text" data-slider="true" data-slider-range="10,200" data-slider-step="1" style="display: none;">-->
+        <div class="text-right"> </div>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text bg-white border-0" id="basic-addon1">
+              <i class="far fa-dot-circle text-success"></i>
+            </span>
+          </div>
+          <input type="text" class="form-control border-0 py-sm-3" placeholder="Location" aria-label="Username" aria-describedby="basic-addon1">
+          <!-- 
+          <div class="input-group-prepend mobile-show"><span class="input-group-text border-0 py-sm-3 bg-blue mr-1" id="basic-addon4">
+        <a data-toggle="collapse" href="#search-location-list"><i class="fa fa-street-view"></i></a>
+          </span>
+          </div>
+          <div class="input-group-prepend mobile-show"><span class="input-group-text border-0 py-sm-3 bg-blue" id="basic-addon4a">
+        <a data-toggle="collapse" href="javascript:void(0)"><i class="fa fa-map-marker"></i></a>
+          </span>
+          </div>
+          -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="showContainer">
+    <div class="lextra-side-bar-container lextra-side-bar-listing-container">
+      <ul class="nav nav-tabs lextra-tab-view" id="lextra-side-bar-tab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link" id="directory-tab" data-toggle="tab" routerLink="./directoryList" role="tab" aria-selected="false" routerLinkActive="active">
+            <i class="fa fa-users"></i> Directory</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="deals-tab" data-toggle="tab" routerLink="./dealsList" role="tab" aria-selected="false" routerLinkActive="active">
+            <i class="fa fa-tags"></i> Deals</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="location-tab" data-toggle="tab" routerLink="./locationList" role="tab" aria-selected="false" routerLinkActive="active">
+            <i class="fa fa-map-marker-alt"></i> Location</a>
+        </li>
+      </ul>
+      <div class="tab-content">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</section>

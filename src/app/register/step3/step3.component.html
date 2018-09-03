@@ -1,0 +1,47 @@
+<div *ngIf = "!delaytime">
+<h3 class="text-center">Successfully Registered</h3>
+<form id="signup" class="regform" [formGroup]="regform">
+  <div class="signup-steptwo">
+    <div class="row">
+      <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <h5 class="font-weight-bold">Verify OTP</h5>
+      </div>
+      <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <i class="input-icon-before fa fa-ellipsis-h"></i>
+        <input name="signup-otp" formControlName="signup_otp" class="form-control floating-input" placeholder="OTP" 
+        (keyup) = ValidateEmail(regform)/>
+        <span class="small UserAvailable text-success" *ngIf="noerror && regform.get('signup_otp').valid">&#x00A0;</span>
+        <span class="small UserNotAvailable text-success" *ngIf="error && regform.get('signup_otp').valid">&#x00A0;</span>
+        <span class="small UserNotAvailable text-success" *ngIf="regform.get('signup_otp').touched && !regform.get('signup_otp').valid">&#x00A0;</span>
+        <div *ngIf="processing">
+          <span class="fa fa-spinner fa-spin keyup-input"></span>
+        </div>
+        <div class="input-error" style="height:21px;">
+        <span class="validate-value" *ngIf="error && regform.get('signup_otp').valid">Cannot Verify Otp</span>
+        <span class="validate-value" *ngIf="noerror && regform.get('signup_otp').valid">Otp Verified</span>
+      </div>
+      </div>
+      
+      <!-- <span class="validate-value" *ngIf="error">Invalid Data</span> -->
+      <!-- <button class="btn submit mb-3" type="submit" [disabled]="regform.invalid || processing">Verify</button> -->
+    </div>
+  </div>
+</form>
+</div>
+<div *ngIf = "delaytime">
+<div class="wait-message text-center mb-3 mt-3" style="padding:80px">
+  <h6 class="position-relative">Please Wait
+    <span class="b-block">
+    <span class="position-relative">
+      <i class="fa fa-circle bounce text-danger"></i>
+    </span>
+    <span class="position-relative">
+      <i class="fa fa-circle bounce bounce1 text-black-50"></i>
+    </span>
+    <span class="position-relative">
+      <i class="fa fa-circle bounce bounce2 text-danger"></i>
+    </span>
+  </span>
+  </h6>
+</div>
+</div>

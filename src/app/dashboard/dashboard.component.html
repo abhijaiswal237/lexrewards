@@ -1,0 +1,56 @@
+<header>
+  <div class="lextra-main-menu">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+      <div class="container">
+        <ul class="navbar-toggler navbar-nav mobile-menu flex-row">
+          <li class="nav-item list-inline-item"><a class="nav-link" href="javascript:void(0)"><span class="oi oi-envelope-closed"></span><sup><span class="badge bg-danger">9</span></sup></a></li>
+        </ul>
+        <a class="navbar-brand" routerLink="/dashboard/main"><img src="assets/images/logo-whi.png" alt="logo"/></a>
+        <ul class="navbar-toggler navbar-nav mobile-menu flex-row">
+          <li class="nav-item list-inline-item"><a class="nav-link" href="javascript:void(0)"><span class="point">5000</span></a> </li>
+          <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+        </ul>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active"><a class="nav-link" routerLink="/dashboard/main">Home <span class="sr-only">(current)</span></a> </li>
+            <li class="nav-item"><a class="nav-link" routerLink="/dashboard/favourites"> Favorite </a> </li>
+            <li class="nav-item"><a class="nav-link" routerLink="/dashboard/deals"> Deals </a> </li>
+            <li class="nav-item"><a class="nav-link" routerLink="/dashboard/points"> Points </a> </li>
+            <li class="nav-item"><a class="nav-link" routerLink="/dashboard/account"> Account </a> </li>
+            <li class="nav-item"><a class="nav-link mobile-hide" routerLink="/dashboard/points"><span class="point">5000</span></a> </li>
+            <li class="nav-item"><a class="nav-link mobile-hide" href="javascript:void(0)"><span class="oi oi-magnifying-glass"></span></a> </li>
+            <li class="nav-item"><a class="nav-link mobile-hide" href="javascript:void(0)"><span class="oi oi-envelope-closed"></span><sup><span class="badge bg-danger">...</span></sup></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!-- main menu --> 
+</header>
+<router-outlet></router-outlet>
+<!-- <app-footer></app-footer> -->
+<footer class="lextra-footer footer-home bg-dark py-5">
+  <div class="container">
+   <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+       <ul class="footer-menu list-inline text-center text-white">
+        <li class="list-inline-item"><a href="">Home</a></li>
+        <li class="list-inline-item"><a href="">Consumers</a></li>
+        <li class="list-inline-item"><a href="">Contact</a></li>
+        <li class="list-inline-item"><a href="">Legal</a></li>
+        <li class="list-inline-item"><a href=""><abbr title="Frequently Asked Questions">FAQ</abbr></a></li>
+        <li class="list-inline-item"><a href="">Careers</a></li>
+      </ul>
+     </div>
+    </div>
+    <div class="row text-center">
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-3 text-sm-center text-md-left">
+        <p class="text-white small">© lexrewards, 2018. All Rights Reserved.</p>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-3 social-media-icon text-center">
+      <a href="javascript:void(0)"><i class="fab fa-google-plus-g text-white"></i></a> <a href="javascript:void(0)"><i class="fab fa-facebook-f text-white"></i></a> <a href="javascript:void(0)"><i class="fab fa-twitter text-white"></i></a> <a href="javascript:void(0)"><i class="fab fa-linkedin-in text-white"></i></a>
+    </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-3 text-sm-center text-md-right"> <img src="assets/images/appstore-img.png" alt="appstore" class="img-fluid"> <img src="assets/images/playstore-img.png" alt="playstore" class="img-fluid"> </div>
+    </div>
+  </div>
+</footer>

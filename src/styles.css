@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+/* @import '~bootstrap/dist/css/bootstrap.min.css'; */
+/* @import 'src/assets/css/main.css';
+@import 'src/assets/css/cal.css';
+@import 'src/assets/css/media.css';
+@import 'src/assets/css/simple-slider.css';
+@import 'src/assets/css/simple-slider-volume.css';
+@import 'src/assets/css/open-iconic-bootstrap.css';
+@import 'src/assets/css/floating-labels.css'; */
+body { 
+    display: block;
+    padding:0;
+}

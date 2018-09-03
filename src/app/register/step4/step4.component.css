@@ -1,0 +1,25 @@
+.error-validate-success {
+    color: green;
+}
+.password-validate-value{
+    border:1px solid #1f3562;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.fa-times{color:red;margin-right: 10px;}
+.error-validate-success .fa-times{
+    color: green;
+}
+.error-validate-success .fa-times:before{
+    content: "\f00c";
+}
+.password-validate-value span {
+    display:block;
+    padding:5px 20px;
+    font-weight: 600;
+    font-size:15px;
+    background:#f2f2f2;
+}
+.password-validate-value span:nth-child(odd) {
+    background:#fff;
+}

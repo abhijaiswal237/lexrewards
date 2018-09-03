@@ -1,0 +1,229 @@
+@charset "utf-8";
+/* CSS Document */
+
+.lextra-deals-list-box h5{width: 100%;max-width: 200px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
+
+
+
+
+@media (max-width: 1200px) { 
+	.lextra-search-directory-list .list-item .location{max-width:70%;}
+}
+
+@media(max-width:991px){
+	.map-container{display:block;}
+	.hide-side-bar{display: none;}
+	section {margin-bottom: 70px;}
+	.mobile-show{display:inline-block;}
+	.mobile-hide{display:none;}
+	.mobile-ham .navbar-toggler-icon {background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(32,52,99, 1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");}
+	.lextra-home-menu .navbar-nav>li:nth-last-child(2) a{margin:0;background: transparent;border:none;color:#363636;border-top:1px solid transparent;border-radius: 0;}
+	.lextra-home-menu .navbar-nav>li:nth-last-child(1) a{margin:0;background: transparent;border:none;color:#363636;border-top:1px solid transparent;border-radius: 0;}
+	.lextra-home-menu .navbar-nav>li:nth-last-child(2) a:hover{margin:0;background: transparent;border:none;color:#363636;box-shadow: none;border-top:1px solid;}
+	.lextra-home-menu .navbar-nav>li:nth-last-child(1) a:hover{margin:0;background: transparent;border:none;color:#363636;box-shadow: none;border-top:1px solid;}
+	.lextra-advanced-serch-form {padding: 30px;background: rgba(255, 255, 255, 0.8);position: static;z-index: 999999;left: -75%;top: 5%;width: 100%;max-width: 100%;margin-bottom: 30px;}
+	.lextra-map-bg #map:after {content: "";background: rgba(1, 58, 104, 0.2);height: 100%;width: 100%;z-index: 0;position: absolute;}
+	.lextra-side-search-box{background:transparent;width: 100%;}
+	span#basic-addon2, span#basic-addon3, span#basic-addon4, span#basic-addon4a {margin-right: 5px;margin-left: 5px;padding: 10px 20px;background: #013a68;color: #fff;font-size: 18px;}
+	.lextra-main-menu .navbar .navbar-brand img{max-width: 280px;}
+	.footer-menu-mobile{display: block;}
+	.lextra-favorite .media{display: inline-block;}
+	.lextra-favorite .media img{margin-bottom: 15px;max-width: 100px;}
+	.lextra-search-location-list {height: calc(100vh - 41%);}
+	.lextra-side-search-box{width:100%;max-width: 100%;}
+	.lextra-advanced-serch-form{max-width:100%;left:0%;}
+	.lextra-search-directory-list .list-item .add-fav{width: 50%;}
+	.lextra-account .lextra-account-box{position:relative;}
+	.lextra-account .lextra-account-box .nav-tabs{display:none; background: #fff;position: absolute;width: 100%;top: 68px;right: 0;z-index: 999;box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.21);}
+	.lextra-account .lextra-account-box .nav-tabs .nav-item{color:#013a68;width: 100%;}
+	.lextra-account .lextra-account-box .nav-tabs .nav-link{margin-right: 0;border:0;}
+	.lextra-account .lextra-account-box .nav-tabs .nav-link.active{background:#013a68;border-radius: 0px;color:#fff;}
+	.lextra-dealslist .lextra-deal-box{display:block;}
+	.lextra-dealslist .lextra-deal-box .media-body{border-left:0;border-top:2px solid #013a68;}
+	.lextra-account .lextra-account-box .nav-tabs .nav-link{margin-bottom:0;}
+	.trans100{transform:translate(0%);}	
+	.lextra-footer{padding: 0 !important;}
+	.lextra-footer .container{display: none;padding: 0;}
+	.lextra-side-search-box{transform: translate(0%);}
+	.lextra-search-location-list {height: calc(100vh - 260px)}
+	.lextra-search-directory-list {height: calc(100vh - 260px)}
+	.lextra-dashboard{margin-bottom:0;display:block;}
+	.lextra-dashboard .lextra-advanced-serch-form {background: rgba(255, 255, 255, 0.6);padding: 10px;position: absolute;left: 0px;width: 100%;margin-bottom: 15px;z-index: 9;}
+	.lextra-dashboard #map{max-width:100%;margin-top:70px; height: calc(100vh - 130px);}
+	.lextra-dashboard .lextra-side-bar-container{width:100%;max-width:100%;position:absolute;top:0;margin-top:150px;padding:0;background:rgba(1, 58, 104, 0.33);display: none;height: calc(100vh - 210px);overflow: hidden;}
+	.display-none{display: block !important;}
+	.lextra-offerpage .lextra-deal-img{float:left;}
+	.lextra-offerpage .lextra-deal-info{float:right;width: 100%;max-width: 70%;margin-left:15px;margin-bottom: 30px;}
+	.lextra-offerpage .media.related-deal-box img{max-width:60px;}
+	.lextra-dashboard .lextra-advanced-serch-form .slider{margin-right:0!important;max-width:98%;}
+	.lextra-tab-view{background:#fff;}
+	.lextra-search-directory-list .list-item .lextra-deal-count{right:0;}
+	.lextra-search-deals-list{height: calc(100vh - 260px);}
+	.lextra-tab-view .nav-item{width:33.2%;}
+}
+
+@media (max-width: 768px) {
+	.lextra-map-header .map form input{width: 100% !important;max-width: 48.5%;margin-bottom: 15px;}
+	.lextra-map-header .inputicon:before {top: -20px;}
+	.lextra-map-header .map .btn-common{margin:auto;}
+	.lextra-home-block .home-block-box{padding:20px 10px;}
+	.lextra-search-directory-list .list-item{margin-right:0;}
+	.lextra-search-directory-list .list-item .media img{max-width:130px;}
+	.lextra-search-directory-list .list-item .deal-count{font-size:16px;right:0;top:0;bottom:auto;border-radius: 0 9px 0 0}
+	.lextra-search-directory-list .list-item .deal-count span{display: inline-block !important; font-size:14px;}
+	.lextra-offerpage .lextra-social-icon li {display: inline-block;margin-right: 2px;}
+	.lextra-offerpage .lextra-social-icon li i{margin-right: 0px;}
+	.lextra-innerpage {margin-top: 70px;}
+	.lextra-profilepage .media.related-profile-box{display:inline-block;}
+	.lextra-profilepage .media.related-profile-box img{border:none;}
+
+}
+@media (max-width: 767px) {
+	.lextra-innerpage{margin-bottom:70px;}
+	.lextra-home-tab .tab-content{padding:15px;}
+	.lextra-home-block .home-block-box{margin-bottom:0px;}
+	.lextra-home-tab .tab-pane{overflow: hidden;}
+	.lextra-home-tab .tab-pane img{width:100%;}
+	.lextra-home-tab .tab-content-box {margin-left: 15px;}
+	.user-label{margin-bottom:15px;}
+	.lextra-favorite .media{display: flex;background:#fff;}
+	.lextra-favorite .media img{margin-bottom: 0px;}
+	.lextra-favorite .media h4{font-size:22px;color:#013a68;}
+	.lextra-favorite .media .lextra-shortdetails, .lextra-favorite .media .contact-num, .lextra-favorite .media .location{}
+	.lextra-fav-bottom{padding:5px 15px;}
+	.lextra-search-directory-list .list-item .add-fav{position: inherit;width: 100%;}
+	.lextra-dealslist .lextra-deal-box{display:flex;background:#fff;}
+	.lextra-dealslist .lextra-deal-box .media-body{border:0;border-left:2px solid #013a68;}
+	.lextra-account .lextra-account-box{box-shadow: none;}
+	.lextra-account .lextra-account-box .tab-content .lextra-account-username{margin-bottom:15px;}
+	.lextra-account .lextra-account-box .tab-content .lextra-account-number{margin-bottom:15px;display: inline-block;}
+	.lextra-pointlist .media{margin-bottom: 15px;box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);background: #fff;}
+	body{background: #e0e7ed;}
+	.lextra-offerpage .offer-deal-box .media{display:inline-block;}
+	.lextra-offerpage .offer-deal-box .media img{width:100%;max-width: 100%;}
+	.lextra-offerpage .lextra-deal-offer{background:#fff;}
+	.lextra-offerpage .media.related-deal-box{background:#fff;margin-bottom: 15px;}
+	.lextra-offerpage .lextra-deal-info{max-width:60%;}
+	.lextra-profilepage .media.related-profile-box, .lextra-profilepage .lextra-profile-offer{background:#fff;}
+	.lextra-profilepage .media.related--box .media-body{border-top:1px solid #ccc;}
+	.lextra-profilepage .lextra-top-bg{margin-bottom: -50px;height:150px;}
+	.lextra-message-box .lextra-message-tab .nav-link{padding:6px;}
+}
+
+@media(max-width:576px){
+	section {margin-bottom:30px;}
+	.lextra-home-tab {padding:30px 0px;}
+	.lextra-home-tab .tab-pane img{display: none;}
+	.lextra-home-tab .nav-tabs a{padding:8px  15px;}
+	.lextra-map-header .map form input{max-width: 100%;margin-right:0;}
+	.inputicon:before {left:-50px;top:-20px;}
+	.lextra-main-menu .navbar .navbar-brand img{max-width: 180px;}
+	.mobile-menu a.nav-link {font-size: 0.8rem !important;margin-right: 10px;}
+	span#basic-addon2, span#basic-addon3, span#basic-addon4, span#basic-addon4a {margin-right: 2px;margin-left: 0px;padding: 10px 10px;background: #013a68;color: #fff;font-size: 14px;height: 100%;}
+	.lextra-side-search-box {padding:5px;}
+	.lextra-search-directory-list .list-item .media img{max-width:76px;}
+	.lextra-search-directory-list .list-item .media .location{display: none;}
+	.lextra-search-directory-list .list-item .deal-count{font-size:14px;right:0;top:0;bottom:auto;border-radius: 0 9px 0 0}
+	.lextra-search-directory-list .list-item .deal-count span{display: inline-block !important; font-size:14px;}
+	.lextra-search-directory-list .list-item .location, .lextra-search-directory-list .list-item .contact-num, .lextra-search-directory-list .list-item .add-fav{font-size:12px;}
+	.lextra-search-directory-list .list-item{margin-right:0;}
+	.lextra-search-directory-list .list-item h5{margin-bottom:0.25rem !important;}
+	.lextra-search-directory-list .list-item .add-fav{margin-bottom:0px !important;}
+	.lextra-search-location-list .city-name {font-size:14px;padding:0.25rem 0.5rem !important;}
+	.lextra-advanced-serch-form {padding: 15px;margin-bottom:15px;}
+	.lextra-innerpage{margin-top:55px;}
+	.map-container{margin-top:58px;}
+	.lextra-dashboard #map{margin-top: 55px;height: calc(100vh - 115px);}
+	.lextra-dashboard .lextra-side-bar-container{margin-top: 125px;height: calc(100vh - 170px);}
+	.lextra-dashboard .lextra-advanced-serch-form{padding:5px;margin-bottom: 0;top:0px;}
+	.lextra-search-directory-list {height: calc(100vh - 215px);}
+	.lextra-search-location-list{height: calc(100vh - 227px);background: transparent !important;}
+	.lextra-search-deals-list {height: calc(100vh - 215px);}
+	.lextra-profilepage .lextra-profile-img {width: 150px;margin: auto;margin-bottom: 30px;}
+	.lextra-profilepage .lextra-top-bg{margin-bottom: -100px;height:150px;}
+	.lextra-profilepage .media.related-profile-box{display:flex;margin-bottom: 15px;}
+	.lextra-profilepage .media.related-profile-box .media-body{border:none;border-left:1px solid #ccc;}
+
+}
+@media(max-width:560px)
+{
+	.lextra-message-box .lextra-message-tab .nav-link {margin-right: 5px;padding: 4px 8px;}
+	.h-mobile-sm{display:none;}
+	.mobile-back-btn{font-size:14px;display: inline-block;margin-right: 15px;}
+	.mobile-back-btn i {margin-right: 8px;}
+	.lextra-transaction-details .card-header a{font-size:14px;}	
+	.lextra-transaction-details .lextra-table-view-details ul li:last-child{font-weight: 400;}
+	.lextra-transaction-details .lextra-table-view-details ul li:first-child{background: linear-gradient(to bottom, #f2f5f6 0%,#e3eaed 37%,#c8d7dc 100%);width: 100%;}
+	.lextra-offerpage .offer-deal-box{margin-bottom: 30px;}
+	.lextra-offerpage .lextra-deal-info{max-width:100%;}
+	.lextra-dashboard .lextra-side-bar-container {min-width: auto;overflow: unset;margin-top:110px;}
+}
+@media(max-width:460px){
+	.navbar-toggler{padding:0;}
+	.lextra-home-menu .navbar-brand img{max-width: 200px;}
+	.grediant-bg .container{padding:15px;}
+	.grediant-bg .container form{max-width: 90%;}
+	.lextra-home-tab .nav-tabs a{padding:5px;border-left:1px solid #ccc;border-radius:  0;font-size: 18px;}
+	.lextra-pointlist h2 span {float: none !important;display: block;text-align: right;width: 100% !important;margin-top:20px;}
+	.lextra-favorite .media{display: inline-flex;padding:5px;}
+	.lextra-favorite .media img{margin-bottom: 15px;border:none;}
+	.lextra-pointlist .media{margin-bottom:15px;}
+	.lextra-favorite .media-body{border-left: 1px solid #ccc;padding-left: 10px;}
+	.lextra-favorite .deal-count{left: 15px;right: auto;bottom: 30px;top: auto;}
+	.lextra-favorite .deal-count span{display:inline-block !important;vertical-align: middle;}
+	.lextra-fav-bottom > span{display:block;}
+	.lextra-account .lextra-account-box h2, .lextra-innerpage-heading{font-size:22px;}
+	.lextra-account .lextra-account-box .tab-content .account-input{font-size:14px;}
+	.lextra-profilepage .saveon-deals {left: 0;right: auto;bottom: 0;top: auto;padding: 10px;}
+	.lextra-message-box .lextra-vertical_tab_container .lextra-user-message-container{background:#fff;}
+	.lextra-message-box .lextra-vertical_tab_container .lextra-message-top-bar h2{font-size:18px;}
+	.lextra-home-block .btn-common{width:fit-content !important;}
+	span.tab-text{display:none;}
+}
+@media(max-width:380px){
+	.lextra-offer-list .offer-category-box{width:92px;}
+	.lextra-home-tab .nav-tabs a{font-size: 16px;}
+	.navbar-light .navbar-brand{flex:1;	}
+	.lextra-dealslist .saveon-deals{top:auto;right:auto;bottom:0;left:0;padding:10px;}
+	.lextra-innerpage h2{font-size:22px;margin-bottom: 15px !important;}
+	.lextra-dashboard .lextra-advanced-serch-form{padding:5px;margin-bottom: 0;}
+	.lextra-dashboard .lextra-search-directory-list {padding-top:0;}
+	.lextra-tab-view a i{display:block;}
+	.lextra-tab-view .nav-item{width:33.2%;font-size: 11px;margin-bottom: -2px;}
+	.lextra-category-icon a{margin-right:0;}
+
+}
+@media(max-width:340px){
+	.lextra-search-directory-list .list-item .add-fav .earn-points{display: none;}
+	.lextra-side-search-box {padding: 0 5px;}
+	.lextra-search-directory-list .list-item h5 {font-size: 16px;}
+	.list-inline-item:not(:last-child){margin-right:0 !important;}
+	.lextra-favorite .media{}
+	.lextra-favorite .media img{width:55px;}
+	.lextra-innerpage {margin-top: 55px;}
+	.lextra-fav-bottom{padding:5px;font-size:12px;}
+	.lextra-favorite .deal-count{font-size:14px;}
+	.lextra-shortdetails{display: none;}
+	.lextra-dealslist .lextra-deal-box .media-body{padding:5px;}
+	.lextra-pointlist .media img{max-width: 60px;}
+	.lextra-dealslist .lextra-deal-box .media-body > div span{font-size: 12px;vertical-align: top;}
+	.lextra-account .lextra-account-box .tab-content{padding:7px;}
+	.lextra-account .lextra-account-box .tab-content .lextra-account-number{font-size:12px;}
+	.lextra-account .lextra-account-box .tab-content .submit{max-width: 180px;}
+}
+	/*
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { ... }
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/

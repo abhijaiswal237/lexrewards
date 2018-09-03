@@ -1,0 +1,89 @@
+<form id="signup" class="regform" [formGroup]="regform" (ngSubmit)="UpdateUser(regform)">
+  <div class="signup-stepthree">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        <div class="user-label">
+          <span>Username :</span>{{username}}</div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        <div class="user-label mb-4">
+          <span>Email :</span>{{email}}</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <i class="input-icon-before far fa-user"></i>
+        <input name="signup-firstname" formControlName="signup_firstname" type="text" class="form-control floating-input" placeholder="First Name"
+        />
+        <span class="small UserAvailable text-success" *ngIf="regform.get('signup_firstname').dirty && !regform.get('signup_firstname').hasError('required')">&#x00A0;</span>
+        <span class="small UserNotAvailable text-success" *ngIf="regform.get('signup_firstname').dirty && regform.get('signup_firstname').hasError('required')">&#x00A0;</span>
+        <!-- <span class="fa fa-spinner fa-spin keyup-input"></span> -->
+        <span class="validate-value" *ngIf="regform.get('signup_firstname').dirty && regform.get('signup_firstname').hasError('required')">First Name Required</span>
+      </div>
+      <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <i class="input-icon-before far fa-user"></i>
+        <input name="signup-lastname" formControlName="signup_lastname" type="text" class="form-control floating-input" placeholder="Last Name"
+        />
+        <span class="small UserAvailable text-success" *ngIf="regform.get('signup_lastname').dirty && !regform.get('signup_lastname').hasError('required')">&#x00A0;</span>
+        <span class="small UserNotAvailable text-success" *ngIf="regform.get('signup_lastname').dirty && regform.get('signup_lastname').hasError('required')">&#x00A0;</span>
+        <!-- <span class="fa fa-spinner fa-spin keyup-input"></span> -->
+        <span class="validate-value" *ngIf="regform.get('signup_lastname').dirty && regform.get('signup_lastname').hasError('required')">Last Name Required</span>
+      </div>
+      <span class="validate-value font-italic">Password should contains atleast one uppercase letter, atleast one lowercase letter, atleast one symbol, and should
+        be of minimum length 6</span>
+      <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <i class="input-icon-before fa fa-key"></i>
+        <input name="signup-password" formControlName="signup_password" type="password" class="form-control floating-input" placeholder="Password"
+          (keyup)="ValidatePassword(regform)" />
+        <span class="small UserAvailable text-success" *ngIf="regform.get('signup_password').dirty && regform.get('signup_password').valid">&#x00A0;</span>
+        <span class="small UserNotAvailable text-success" *ngIf="regform.get('signup_password').dirty && !regform.get('signup_password').valid">&#x00A0;</span>
+        <!-- <span class="fa fa-spinner fa-spin keyup-input"></span> -->
+
+        <div class="validate-value password-validate-value " *ngIf="regform.get('signup_password').dirty && !regform.get('signup_password').valid">
+          <span [class.error-validate-success] = "upperfound"><i class="fa fa-times"></i> Atleast One Uppercase Letter</span>
+          <span [class.error-validate-success] = "lowerfound"><i class="fa fa-times"></i> Atleast One Lowercase Letter</span>
+          <span [class.error-validate-success] = "symbolfound"><i class="fa fa-times"></i> Atleast One Symbol</span>
+          <span [class.error-validate-success] = "numberfound"><i class="fa fa-times"></i> Atleast One Number</span>
+          <span [class.error-validate-success] = "lengthsix"><i class="fa fa-times"></i> Minimum Length 6</span>
+        </div>
+        <!-- <span class="validate-value" *ngIf="regform.get('signup_password').dirty && !regform.get('signup_password').valid">Weak Password</span>
+        <span class="validate-value" *ngIf="regform.get('signup_password').dirty && regform.get('signup_password').valid">Strong password</span> -->
+      </div>
+      <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <i class="input-icon-before fa fa-key"></i>
+        <input name="signup-confirm-password" formControlName="signup_confirm_password" type="password" class="form-control floating-input"
+          placeholder="Confirm Password" (keyup)="ComparePassword(regform)" />
+        <span class="small UserAvailable text-success" *ngIf="regform.get('signup_confirm_password').dirty && !noMatch && !regform.get('signup_password').hasError('required')">&#x00A0;</span>
+        <span class="small UserNotAvailable text-success" *ngIf="regform.get('signup_confirm_password').dirty && noMatch && regform.get('signup_password').hasError('required')">&#x00A0;</span>
+        <!-- <span class="fa fa-spinner fa-spin keyup-input"></span> -->
+        <span class="validate-value" *ngIf="noMatch && !regform.get('signup_confirm_password').hasError('required')">Password & Confirm Password does not Match</span>
+        <span class="validate-value" *ngIf="!noMatch && !regform.get('signup_confirm_password').hasError('required')">Password & Confirm Password Match</span>
+        <span class="validate-value" *ngIf="regform.get('signup_confirm_password').touched && regform.get('signup_confirm_password').hasError('required')">Confirm Password Required</span>
+      </div>
+      <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <i class="input-icon-before far fa-compass"></i>
+        <input name="signup-zip" formControlName="signup_zipcode" type="number" class="form-control floating-input" placeholder="Zip code/Pin code"
+          (keyup)=VerifyZip(regform)/>
+        <span class="small UserAvailable text-success" *ngIf="!zipError && regform.get('signup_zipcode').dirty && !regform.get('signup_zipcode').hasError('required')">&#x00A0;</span>
+        <span class="small UserNotAvailable text-success" *ngIf="regform.get('signup_zipcode').dirty && regform.get('signup_zipcode').hasError('required') && zipError">&#x00A0;</span>
+        <!-- <div *ngIf = "processing">
+        <span class="fa fa-spinner fa-spin"></span>
+        </div> -->
+        <span class="validate-value" *ngIf="regform.get('signup_zipcode').dirty && regform.get('signup_zipcode').hasError('required')">Zip Code/Pin Code is Required</span>
+        <span class="validate-value" *ngIf="regform.get('signup_zipcode').dirty && !regform.get('signup_zipcode').hasError('required') && zipError">Invalid Format</span>
+        <span class="validate-value" *ngIf="regform.get('signup_zipcode').dirty && !regform.get('signup_zipcode').hasError('required') && !zipError">{{ZipData}}</span>
+      </div>
+      <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <div class="custom-control custom-checkbox mb-4 w-100">
+          <input type="checkbox" formControlName="signup_terms" class="custom-control-input" id="customControlValidation1">
+          <label class="custom-control-label" for="customControlValidation1">I agree with the
+            <a href="javascript:void(0)" data-toggle="modal" data-target="#termcondition" class="font-weight-bold">terms & conditions</a>.</label>
+        </div>
+      </div>
+      <div class="input-error" style="height:21px;">
+        <span class="validate-value" *ngIf="error">Some Error Occured</span>
+      </div>
+      <button class="btn submit" type="submit" [disabled]="regform.invalid || zipError || processing">Register</button>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,31 @@
+<form id="signup" class="regform" [formGroup]="regform" (ngSubmit)="ValidateEmail(regform)">
+  <div class="signup-steptwo">
+    <div class="display-text">
+      <h2 class="mb-3 font-weight-bold text-dark">Enter your Email Address and Password</h2>
+      <p class="mb-3">We need to know how to contact you</p>
+    </div>
+    <div class="row">
+      <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <i class="input-icon-before far fa-envelope"></i>
+        <input name="signup-email" formControlName="signup_email" type="email" class="form-control floating-input" placeholder="Email"
+         (keyup) = "AvailableEmail(regform)"/>
+        <span class="small UserAvailable text-success" *ngIf="noerror && regform.get('signup_email').valid">&#x00A0;</span>
+        <span class="small UserNotAvailable text-success" *ngIf="error && regform.get('signup_email').valid">&#x00A0;</span>
+        <div *ngIf="processing || (regform.get('signup_email').dirty && !regform.get('signup_email').valid)">
+          <span class="fa fa-spinner fa-spin keyup-input"></span>
+        </div>
+        <div class="input-error" style="height:21px;">
+        <span class="validate-value" *ngIf="regform.get('signup_email').touched && regform.get('signup_email').hasError('email')">Invalid Email Id</span>
+        <span class="validate-value" *ngIf="(error && regform.get('signup_email').valid) || (!error && !noerror && !processing)">{{ErrorType}}</span>
+        <!-- <span class="validate-value text-white" *ngIf="(processing && regform.get('signup_email').valid) || !regform.get('signup_email').valid">Processing</span> -->
+        <span class="validate-value" *ngIf="noerror && regform.get('signup_email').valid">Email Id Available</span>
+      </div>
+      </div>
+      <button class="btn submit mb-3" type="submit" [disabled]="regform.invalid || processing || error">Next Step</button>
+    </div>
+  </div>
+</form>
+<a routerLink="/register/step1" class="text-primary text-center w-100 mb-3 d-block">
+  <i class="fa fa-arrow-left"></i>
+  <strong>Go Back</strong>
+</a>

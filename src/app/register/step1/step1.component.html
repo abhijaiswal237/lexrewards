@@ -1,0 +1,28 @@
+<form id="signup" class="regform" [formGroup]="regform" (ngSubmit)="NextForm()">
+    <div class="signup-stepone">
+        <div class="display-text">
+            <h2 class="mb-3 font-weight-bold text-dark">Get started</h2>
+            <p class="mb-3">Start with a username. Your username is how you'll be known on Steemit and other Steem-based apps.</p>
+        </div>
+        <div class="row">
+            <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <i class="far fa-user input-icon-before"></i>
+                <input name="signup-username" formControlName="signup_username" type="text" class="form-control floating-input" placeholder="Username"
+                    (keyup)="ValidateUsername(regform)" />
+                <span class="small UserAvailable text-success" *ngIf="noerror && regform.get('signup_username').valid">&#x00A0;</span>
+                <span class="small UserNotAvailable text-success" *ngIf="error && regform.get('signup_username').valid">&#x00A0;</span>
+                <span class="small UserNotAvailable text-success" *ngIf="regform.get('signup_username').touched && !regform.get('signup_username').valid">&#x00A0;</span>
+                <div *ngIf="processing">
+                    <span class="fa fa-spinner fa-spin keyup-input"></span>
+                </div>
+                <div class="input-error" style="height:21px;">
+                <span class="validate-value" *ngIf="error && regform.get('signup_username').valid">{{ErrorType}}</span>
+                <span class="validate-value" *ngIf="noerror && regform.get('signup_username').valid">This username is available.</span>
+                <!-- <span class="validate-value" *ngIf="(regform.get('signup_username').valid && processing) || (!processing && !errro && !noerror)">Processing</span> -->
+                <span class="validate-value" *ngIf="!regform.get('signup_username').valid">Username can be between 4 to 15 character long alphanumeric only.</span>
+            </div>
+            </div>
+            <button type="submit" [disabled]="error || processing" class="btn btn-dark submit">Next</button>
+        </div>
+    </div>
+</form>
